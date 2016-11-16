@@ -4,4 +4,14 @@ class PagesController < ApplicationController
 
   def about
   end
+
+	def fortunecookies
+  end
+
+  def whiteman
+  end
+
+  def gargleoil
+  end
+
 end
