@@ -36,6 +36,7 @@ class PinsController < ApplicationController
   def destroy
     if @pin.destroy
     respond_with(@pin)
+    end
   end
 
   private
