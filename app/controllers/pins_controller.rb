@@ -25,6 +25,7 @@ class PinsController < ApplicationController
     flash[:notice] = "pin was successfully created"
     if @pin.save
     respond_with(@pin)
+    end
   end
 
   def update
