@@ -22,12 +22,14 @@ class PinsController < ApplicationController
 
   def create
     @pin = Pin.new(pin_params)
-    @pin.save
+    flash[:notice] = "pin was successfully created"
+    if @pin.save
     respond_with(@pin)
   end
 
   def update
     @pin.update(pin_params)
+    flash[:notice] = "pin was successfully updated"
     respond_with(@pin)
   end
 
