@@ -35,7 +35,8 @@ class PinsController < ApplicationController
 
   def destroy
     if @pin.destroy
-    respond_with(@pin)
+      flash[:notice] = "pin was successfully deleted"
+      respond_with(@pin)
     end
   end
 
@@ -49,4 +50,4 @@ class PinsController < ApplicationController
     end
   end
 end
-
+end
