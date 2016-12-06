@@ -13,6 +13,7 @@ gem "bootstrap-sass"
 gem "devise", "4.2.0"
 gem "rake"
 gem "paperclip", '~> 4.2.0'
+gem "aws-sdk", '~> 2'
 
 group :development, :test do 
 	gem 'sqlite3'
