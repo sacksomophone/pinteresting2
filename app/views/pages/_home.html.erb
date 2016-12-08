@@ -3,20 +3,13 @@
 	<h1>Welcome to my App.</h1>
 		<p>We are here to make you laugh</p>
 
-		<p>
-				<%= link_to "WhiteMan", whiteman_path, class: "	btn btn-info"  %> 
-				<%= link_to "FortuneCookies500", fortunecookies_path, class: "btn btn-info" %>
-				<%= link_to "GargleOil", gargleoil_path, class: "btn btn-info" %>
-		</p>	
 
-		<% if user_signed_in? %>		
-		# do something
-		<% else %>
 			<p>
 				<%= link_to "Login", new_user_session_path, class: "	btn btn-info"  %> 
 				<%= link_to "Sign up", new_user_registration_path, class: "	btn btn-info"  %> 
 			</p>
-		<%end%>	
+
+
 
 </div>
 
