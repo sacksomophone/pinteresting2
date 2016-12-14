@@ -6,7 +6,7 @@ class PinsController < ApplicationController
   respond_to :html
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order(created_at: :desc)
     respond_with(@pins)
   end
 
@@ -24,22 +24,22 @@ class PinsController < ApplicationController
 
   def create
     @pin = current_user.pins.build(pin_params)
-    flash[:notice] = "pin was successfully created"
     if @pin.save
-    respond_with(@pin)
+    respond_with(@pin) 
+    flash[:notice] = "pin was successfully created"
     end
   end
 
   def update
     @pin.update(pin_params)
-    flash[:notice] = "pin was successfully updated"
-    respond_with(@pin)
+      respond_with(@pin) 
+      flash[:notice] = "pin was successfully updated"
   end
 
   def destroy
     if @pin.destroy
+      respond_with(@pin) 
       flash[:notice] = "pin was successfully deleted"
-      respond_with(@pin)
     end
   end
 
